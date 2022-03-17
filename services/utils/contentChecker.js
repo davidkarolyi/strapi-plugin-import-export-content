@@ -4,7 +4,7 @@ const { importMediaFromUrl } = require("../importer/importMediaFiles");
 
 function getId(value) {
   if (typeof value === "number") return value;
-  if (typeof value === "object" && value.id) return value.id;
+  if (typeof value === "object" && value !== null && value.id) return value.id;
   return null;
 }
 
